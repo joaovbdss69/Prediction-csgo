@@ -1,9 +1,69 @@
-prediction-csgo
-==============================
+# 🧬 Prediction CS:GO
 
-Projeto para realizar previsões sobre rounds no CS:GO
+## 🎯 Objetivo
 
-Project Organization
+O objetivo desse projeto é realizar a modelagem de 3 algoritmos de categorização diferentes para o mesmo dataset para identificar como cada um lida com aqueles dados e mostrar suas implementações.
+
+Os 3 algoritmos que serão implementados são:
+- KNN
+- RandomForest
+- Rede Neural
+
+O dataset em questão é sobre rounds jogados dentro do jogo CS:GO em 700 demos de torneios de alto nível nos anos de 2019 e 2020 onde a cada 20 segundos é tirado uma "foto" do round até que a partida fosse decidida. O conjunto de dados foi publicado originalmente pela Skybox como parte de seu CS:GO AI Challenge, ocorrendo da primavera ao outono de 2020, entretanto o local no qual foi disponibilizado e se tem todas as informações segue abaixo:
+
+https://www.openml.org/search?type=data&sort=runs&id=43430&status=active
+
+
+## ETL
+
+- Criação de variável resposta baseada na coluna round_winner (tr_win) ✔️
+- Verificação da váriavel "Map"✔️
+- Separação das 25 váriaveis com maior correlação com a target ✔️
+- Análise da distribuição da variável resposta x features ✔️
+- Verificação da distribuição da variável resposta ✔️
+- Geração do Dataset final✔️
+
+  Obs: Foi realizado algumas verificações durante o pré processamento, para verificação de valores nulos nas features e na target
+
+  ## Construção dos Modelos
+
+  ### KNN
+
+- Divisão entre treino e teste, como padrão foi utilizado o split entre 80 - 20
+
+     ![SeparacaoTreinoTesteKNN](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/SeparacaoTreinoTesteKNN.png)
+
+- Testando diversos Valores de K para achar o melhor para o problema com base na acurácia
+  ![TesteK](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/TesteK.png)
+
+- Criação de modelo e treinamento
+
+- Resultados pela matriz de confusão e métricas de acurácia,precisão,recall e F1 Score
+
+  ![MatrizConfusaoKNN](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/MatrizConfusaoKNN.png)
+
+  ### RandomForest
+
+- Divisão entre treino e teste, como padrão foi utilizado o split entre 80 - 20
+
+- Seleção de parâmetros do modelo
+    - n_estimators
+    - max_depth
+    - max_features
+    - criterion    
+-  E para atingir os melhores valores para esses parâmetros foi utilizado o BayesianOptimization
+  
+-  Criação de modelo e treinamento
+
+-  Resultados pela matriz de confusão e métricas de acurácia,precisão,recall e F1 Score
+
+  ### Rede Neural
+
+
+
+## Organização do Projeto 🛠️
+
+Foi utilizado para construção da estrutura inicial o <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">Cookiecutter</a>, onde ele propoe uma estrutura lógica e flexivel para trabalhos de Data Science. O mesmo cria um projeto com a estrutura abaixo: 
 ------------
 
     ├── LICENSE
@@ -53,5 +113,4 @@ Project Organization
 
 
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+  
