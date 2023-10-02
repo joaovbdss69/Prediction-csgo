@@ -42,20 +42,41 @@ https://www.openml.org/search?type=data&sort=runs&id=43430&status=active
 
   ![MatrizConfusaoKNN](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/MatrizConfusaoKNN.png)
 
-  ### RandomForest
+  ### RandomForest 
 
 - Divisão entre treino e teste, como padrão foi utilizado o split entre 80 - 20
+
+    ![SeparacaoTreinoTesteRandomForest](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/SeparacaoTreinoTesteRandomForest.png)
 
 - Seleção de parâmetros do modelo
     - n_estimators
     - max_depth
     - max_features
-    - criterion    
+    - criterion   
+
+    ![ParametrosRandomForest](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/ParametrosRandomForest.png)
+
+
 -  E para atingir os melhores valores para esses parâmetros foi utilizado o BayesianOptimization
-  
+
+    ![BayesianOptimizationRandomForest](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/BayesianOptimizationRandomForest.png)
+
+
 -  Criação de modelo e treinamento
 
--  Resultados pela matriz de confusão e métricas de acurácia,precisão,recall e F1 Score
+    ![TreinamentoModeloRandomForest](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/TreinamentoModeloRandomForest.png)
+
+-  Resultados pela Curva ROC e matriz de confusão e métricas de acurácia,precisão,recall e F1 Score
+
+  - Curva ROC
+
+    ![CurveROCRandomForest](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/CurveROCRandomForest.png)
+
+  - Matriz de Confusão
+
+    ![MatrizConfusaoRandomForest](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/MatrizConfusaoRandomForest.png)
+
+
 
   ### Rede Neural
 
