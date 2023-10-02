@@ -78,7 +78,15 @@ https://www.openml.org/search?type=data&sort=runs&id=43430&status=active
 
 
 
-  ### Rede Neural
+  ### Rede Neural 🛠️
+
+  - Criação das Layers para modelo de Rede Neural
+
+      ![LayersMetricsNN](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/LayersMetricsNN.png)
+
+  - Resultados do Modelo utilizando as métricas "Accuracy","AUC", "Precision" e "Recall"
+
+    ![ResultModelNN](https://github.com/joaovbdss69/Prediction-csgo/blob/main/reports/figures/ResultModelNN.png)
 
 
 
